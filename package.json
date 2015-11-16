@@ -5,6 +5,10 @@
   "dependencies": {
     "pegjs": "0.8.0",
 	"ftp": "0.3.10",
-	"rss": "1.1.1"
+	"rss": "1.1.1",
+	"express": "4.2.x"
+  },
+  "scripts" : {
+      "start": "node app.js"
   }
 }
