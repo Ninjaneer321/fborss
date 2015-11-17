@@ -1,5 +1,5 @@
 {
-  "name": "fbo-parser",
+  "name": "fborss",
   "version": "0.0.1",
   "description": "Parses Sources Sought and Presolicitation notices FBO FTP dumps, generating RSS",
   "dependencies": {
@@ -10,5 +10,6 @@
   },
   "scripts" : {
       "start": "node app.js"
-  }
+  },
+  "main": "app.js"
 }
