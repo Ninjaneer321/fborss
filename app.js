@@ -1,4 +1,7 @@
 var http = require('http');
+var path = require('path');
+var fs = require('fs');
+//var mime = require('mime');
 var express = require('express');
 var app = express();
 
@@ -10,5 +13,20 @@ http.createServer(app).listen(app.get('port'), app.get('ip'), function(){
 });
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send('Nothing to see here!');
+});
+
+app.get('/geospatial', function(req, res){
+
+  var file = __dirname + '/geospatial.xml';
+  res.setHeader('Content-type', 'application/rss+xml');
+  res.sendfile(file);
+/*  var filename = path.basename(file);
+  //var mimetype = mime.lookup(file);
+
+  res.setHeader('Content-disposition', 'attachment; filename=' + filename);
+  res.setHeader('Content-type', 'application/rss+xml');
+
+  var filestream = fs.createReadStream(file);
+  filestream.pipe(res);*/
 });
