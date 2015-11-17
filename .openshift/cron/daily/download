@@ -1,0 +1,2 @@
+#! /bin/bash
+nohup /usr/bin/node $OPENSHIFT_HOMEDIR/geospatial.js
